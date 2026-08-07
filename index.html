@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الحديبي للأقمشة | Al Hodaiby Fabrics</title>
+<meta name="description" content="ملوك الكاجوال - أجود أنواع الأقمشة بأفضل الأسعار">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#home">ملوك <span>الكاجوال</span></a>
+  <nav><a href="#home">الرئيسية</a><a href="#products">الأقمشة</a><a href="#offers">العروض</a><a href="#contact">تواصل معنا</a></nav>
+  <button class="cartBtn" onclick="openCart()">🛒 السلة <b id="cartCount">0</b></button>
+</header>
+
+<section id="home" class="hero">
+  <div class="heroText">
+    <p class="tag">بيع قطاعي • نصف جملة • جملة</p>
+    <h1>الحديبي للأقمشة</h1>
+    <h2>أجود أنواع الأقمشة بأفضل الأسعار</h2>
+    <p>اختار الخامة والكمية، أضفها للسلة، وابعت طلبك مباشرة على واتساب.</p>
+    <a class="mainBtn" href="#products">تسوق الآن</a>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="sectionHead"><div><p class="tag">اختياراتنا</p><h2>الأقمشة</h2></div><input id="search" placeholder="ابحث عن خامة..." oninput="renderProducts()"></div>
+  <div id="productsGrid" class="products"></div>
+</section>
+
+<section id="offers" class="offer section">
+  <p class="tag">الجديد عندنا</p><h2>العروض والخامات الجديدة</h2>
+  <p>هنضيف هنا أحدث الخامات والعروض والأسعار أولًا بأول.</p>
+</section>
+
+<section class="section why">
+<h2>ليه ملوك الكاجوال؟</h2>
+<div class="whyGrid"><div>⭐ <b>جودة مميزة</b><small>خامات مختارة بعناية</small></div><div>💰 <b>أسعار منافسة</b><small>قطاعي ونصف جملة وجملة</small></div><div>🚚 <b>شحن</b><small>لجميع المحافظات</small></div><div>📱 <b>طلب سهل</b><small>مباشرة من واتساب</small></div></div>
+</section>
+
+<section id="contact" class="section contact">
+<h2>تواصل معنا</h2>
+<p>📍 شارع الأزهر الشريف – الغورية – ممر رقم 2 – محل ملوك الكاجوال</p><p>Al Hodaiby Fabrics</p>
+<p>👤 الإدارة: عمرو عبد السميع</p>
+<div><a class="phone" href="tel:01012377450">01012377450</a><a class="phone" href="tel:01123264419">01123264419</a></div>
+<a class="wa" href="https://wa.me/201012377450" target="_blank">💬 تواصل معنا على واتساب</a>
+</section>
+
+<footer>© 2026 الحديبي للأقمشة — ملوك الكاجوال — جميع الحقوق محفوظة</footer>
+
+<div id="cartModal" class="modal" onclick="if(event.target===this)closeCart()">
+ <div class="cart"><button class="close" onclick="closeCart()">×</button><h2>سلة المشتريات</h2><div id="cartItems"></div><div class="total">الإجمالي: <b id="total">0</b> جنيه</div>
+ <input id="customerName" placeholder="اسم العميل"><input id="customerPhone" placeholder="رقم الهاتف"><textarea id="customerAddress" placeholder="العنوان بالتفصيل"></textarea>
+ <button class="order" onclick="sendOrder()">إرسال الطلب على واتساب</button>
+ </div>
+</div>
+<script src="script.js"></script>
+</body></html>
